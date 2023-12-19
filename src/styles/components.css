@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* src/styles/components.css */
+@layer components {
+    .btn-primary {
+        @apply px-4 py-2 font-bold text-white rounded bg-primary;
+    }
+
+    .btn-primary:hover {
+        @apply bg-blue-700;
+    }
+
+    .small-text-style {
+        @apply text-sm font-normal leading-tight dark:text-gray-400 md:text-[15px] md:leading-8;
+    }
+
+    .medium-text-style {
+        @apply text-xl font-bold transition-all hover:text-accent-blue dark:text-gray-100 dark:hover:text-accent-blue md:text-[21px];
+    }
+    .tags-style {
+        @apply mb-2 mr-4 cursor-pointer text-[13px] font-light text-sky-500 hover:text-sky-600 dark:hover:text-sky-400 md:text-[14px];
+    }
+}
