@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/react";
 
 const sans = Open_Sans({ subsets: ["latin"] });
 
@@ -21,8 +22,8 @@ export default function RootLayout({
             <body className="flex flex-col bg-background-default dark:bg-background-dark">
                 <Providers>
                     <Navbar />
-
                     {children}
+                    <Analytics />
                 </Providers>
             </body>
         </html>
