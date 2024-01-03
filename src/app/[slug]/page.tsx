@@ -30,11 +30,12 @@ export async function generateMetadata({ params }: Props) {
 export default async function ProductPage({ params: { slug } }: Props) {
     const posts = await getPosts();
     const post = posts.find((t) => t.slug === slug);
-    const blockMap = await getPostBlocks(post?.id!);
 
-    if (!blockMap || !post) {
+    if (!post) {
         notFound();
     }
+
+    const blockMap = await getPostBlocks(post?.id!);
 
     return (
         <div className={`m-auto max-w-7xl py-5`}>
