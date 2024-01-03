@@ -6,6 +6,8 @@ import { filterPosts } from "@/service/notion/filterPost";
 import { getAllTagsFromPosts } from "@/service/notion/getAllTagsFromPosts";
 import { getPosts } from "@/service/notion/getPosts";
 
+export const revalidate = 60 * 60 * 24;
+
 export default async function Home() {
     const posts = await getPosts();
 
