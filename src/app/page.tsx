@@ -5,8 +5,13 @@ import PostList from "@/components/PostList";
 import { filterPosts } from "@/service/notion/filterPost";
 import { getAllTagsFromPosts } from "@/service/notion/getAllTagsFromPosts";
 import { getPosts } from "@/service/notion/getPosts";
+import { Suspense } from "react";
 
-export const revalidate = 60 * 60 * 24;
+export const revalidate = 1;
+
+function SearchBarFallback() {
+    return <>placeholder</>;
+}
 
 export default async function Home() {
     const posts = await getPosts();
@@ -24,7 +29,9 @@ export default async function Home() {
                 <div className="md:hidden">
                     <Avatar />
                 </div>
-                <PostList posts={filteredPost} tags={tags} />
+                <Suspense fallback={<SearchBarFallback />}>
+                    <PostList posts={filteredPost} tags={tags} />
+                </Suspense>
             </section>
             <footer className="md:hidden">
                 <MoblieContactInfo />
