@@ -1,8 +1,5 @@
 "use client";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+
 import { ChangeEvent, useCallback, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import "src/styles/components.css";
