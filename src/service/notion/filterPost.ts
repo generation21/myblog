@@ -1,7 +1,7 @@
 import { TPosts, TPostPublic, TPostType } from "src/types";
 
 type Options = {
-    acceptType?: TPostType[];
+    acceptType: TPostType[];
     publicType?: TPostPublic;
 };
 
@@ -15,7 +15,7 @@ tomorrow.setDate(tomorrow.getDate() + 1);
 tomorrow.setHours(0, 0, 0, 0);
 
 export function filterPosts(posts: TPosts, options: Options = initialOption) {
-    const { acceptType = ["Post"], publicType } = options;
+    const { acceptType, publicType } = options;
     const filteredPosts = posts
         // filter data
         .filter((post) => {
