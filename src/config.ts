@@ -22,4 +22,5 @@ export const CONFIG = {
         secret: process.env.NEXT_PUBLIC_NOTION_API_SECRET,
         databaseId: process.env.NEXT_PUBLIC_NOTION_BLOG_ID,
     },
+    since: 2024,
 };
