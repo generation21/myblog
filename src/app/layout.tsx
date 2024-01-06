@@ -5,6 +5,7 @@ import { Open_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const sans = Open_Sans({ subsets: ["latin"] });
 
@@ -35,10 +36,12 @@ export default function RootLayout({
                 <Providers>
                     <Navbar />
                     {children}
-
                     <Footer />
-                    <Analytics />
+
+                    
                 </Providers>
+                <Analytics />
+                    <SpeedInsights />
             </body>
         </html>
     );
