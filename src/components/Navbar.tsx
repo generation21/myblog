@@ -28,7 +28,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-row gap-3">
                 {navList.map((item) => (
-                    <Link href={"/posts"} key={item.text}>
+                    <Link href={item.link} key={item.text}>
                         <div className="p-2 font-normal transition duration-300 ease-in-out rounded-lg text-text-primary hover:bg-gray-200 dark:text-text-dark dark:hover:bg-gray-700">
                             {item.text}
                         </div>

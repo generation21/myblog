@@ -1,4 +1,5 @@
 import { TPosts, TTags } from "@/types";
+import Link from "next/link";
 import React from "react";
 import PostCard from "./PostCard";
 
@@ -11,11 +12,16 @@ export default function RecentPostList({ posts }: Props) {
 
     return (
         <>
-            <div className="w-full h-full">
+            <div className="">
                 {RecentPosts.map((post) => (
                     <PostCard key={post.id} {...post} />
                 ))}
             </div>
+            <Link href={"/posts"}>
+                <p className="mt-4 text-lg text-end text-primary">
+                    read all posts→
+                </p>
+            </Link>
         </>
     );
 }

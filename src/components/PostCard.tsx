@@ -16,9 +16,11 @@ export default function PostCard({
     title,
     thumbnail,
 }: TPost) {
+    const postLink = `/posts/${slug}`;
+
     const router = useRouter();
     const handleClick = () => {
-        router.push(`${slug}`);
+        router.push(postLink);
     };
     const handleTagClick = (tag: string) => {
         router.push(`/?tag=${tag}`);
@@ -67,7 +69,7 @@ export default function PostCard({
                         {date.start_date}
 
                         <Link
-                            href={`${slug}`}
+                            href={postLink}
                             className="absolute top-0 right-0 mb-2 mr-1 text-xs font-light cursor-pointer text-sky-500 hover:text-sky-600 dark:hover:text-sky-400 md:text-sm"
                         >
                             Read more →
