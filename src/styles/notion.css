@@ -55,8 +55,12 @@ svg + .notion-page-title-text {
     @apply text-gray-600 dark:text-gray-300;
 }
 
+.notion-code {
+    @apply bg-gray-200 dark:bg-gray-900;
+}
+
 .notion-code > code {
-    @apply text-gray-900;
+    @apply text-gray-900 dark:text-gray-200;
 }
 
 pre[class*="language-"] {
@@ -155,9 +159,9 @@ pre[class*="language-"] {
     @apply border-b-gray-400;
 }
 
-/* 이미지 좌측으로 */
+/* 이미지 중앙으로 */
 .notion-asset-wrapper-image > div {
-    align-self: flex-start !important;
+    align-self: flex-center !important;
 }
 /* 이미지 radius */
 .notion-asset-wrapper img {
